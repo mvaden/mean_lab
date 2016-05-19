@@ -12,4 +12,4 @@ mongoose.model("Friends", Friends);
 
 
 
-module.exports= mongoose;
+module.exports = mongoose;
