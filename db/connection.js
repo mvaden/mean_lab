@@ -4,9 +4,7 @@ mongoose.connect("mongodb://localhost/youoweme")
 
 var Friends = mongoose.Schema({
   name: String,
-  age: Integer,
-  amount: Integer,
-  reason: String
+  excuse: String
 });
 
 mongoose.model("Friends", Friends);
