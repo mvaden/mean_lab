@@ -1,13 +1,29 @@
 var mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/youoweme")
-
-var Friends = mongoose.Schema({
-  name: String,
-  excuse: String
+// friends Schema
+var friendSchema = mongoose.Schema({
+  first_name: {
+    type: String,
+    required: true
+  },
+  last_name: {
+    type: String,
+    required: true
+  },
+  phone: {
+    type: String
+  },
+  email: {
+    type: String
+  },
+  status: {
+    type: String
+  }
 });
 
-mongoose.model("Friends", Friends);
+var Friend = module.exports = mongoose.model("Friend", friendSchema);
+
+
 
 
 
